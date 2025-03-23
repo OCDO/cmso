@@ -415,7 +415,7 @@ f(x) = 1/(√(2 π) σ) e^-((x - μ)^2/(2 σ^2))</obo:IAO_0000112>
     
 
 
-    <!-- http://purls.helmholtz-metadaten.de/cmso/hasLength -->
+    <!-- http://purls.helmholtz-metadaten.de/cmso/hasSimulationCellLength -->
 
     <owl:ObjectProperty rdf:about="http://purls.helmholtz-metadaten.de/cmso/hasLength">
         <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cmso/SimulationCell"/>
