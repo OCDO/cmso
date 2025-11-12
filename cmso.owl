@@ -720,8 +720,7 @@ f(x) = 1/(√(2 π) σ) e^-((x - μ)^2/(2 σ^2))</obo:IAO_0000112>
     <!-- http://purls.helmholtz-metadaten.de/cmso/hasGrainSize -->
 
     <owl:DatatypeProperty rdf:about="http://purls.helmholtz-metadaten.de/cmso/hasGrainSize">
-        <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cmso/Bicrystal"/>
-        <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cmso/Polycrystal"/>
+        <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cmso/SimulationCell"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has grain size</rdfs:label>
     </owl:DatatypeProperty>
@@ -800,7 +799,7 @@ f(x) = 1/(√(2 π) σ) e^-((x - μ)^2/(2 σ^2))</obo:IAO_0000112>
     <!-- http://purls.helmholtz-metadaten.de/cmso/hasNumberOfGrains -->
 
     <owl:DatatypeProperty rdf:about="http://purls.helmholtz-metadaten.de/cmso/hasNumberOfGrains">
-        <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cmso/Polycrystal"/>
+        <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cmso/SimulationCell"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has number of grains</rdfs:label>
     </owl:DatatypeProperty>
