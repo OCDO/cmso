@@ -37,3 +37,11 @@ license: CC-BY-4.0
 commit: a1f69a28480796602b57fe9c0766d315797ea042
 version: v0.0.1
 date-released: '2024-03-11'
+preferred-citation:
+  authors:
+    - family-names: Azocar Guzman
+      given-names: Abril
+  title: "Computational Material Sample Ontology (CMSO)"
+  type: generic
+  year: 2024
+  url: https://doi.org/10.5281/zenodo.10805536
