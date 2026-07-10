@@ -548,6 +548,8 @@ f(x) = 1/(√(2 π) σ) e^-((x - μ)^2/(2 σ^2))</obo:IAO_0000112>
     <!-- http://purls.helmholtz-metadaten.de/cmso/isCalculatedPropertyOf -->
 
     <owl:ObjectProperty rdf:about="http://purls.helmholtz-metadaten.de/cmso/isCalculatedPropertyOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://purls.helmholtz-metadaten.de/cmso/ComputationalSample"/>
         <rdfs:label>is calculated property of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -556,6 +558,8 @@ f(x) = 1/(√(2 π) σ) e^-((x - μ)^2/(2 σ^2))</obo:IAO_0000112>
     <!-- http://purls.helmholtz-metadaten.de/cmso/isDefectOf -->
 
     <owl:ObjectProperty rdf:about="http://purls.helmholtz-metadaten.de/cmso/isDefectOf">
+        <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cmso/CrystalDefect"/>
+        <rdfs:range rdf:resource="http://purls.helmholtz-metadaten.de/cmso/ComputationalSample"/>
         <rdfs:label>is defect of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -564,6 +568,9 @@ f(x) = 1/(√(2 π) σ) e^-((x - μ)^2/(2 σ^2))</obo:IAO_0000112>
     <!-- http://purls.helmholtz-metadaten.de/cmso/isMaterialOf -->
 
     <owl:ObjectProperty rdf:about="http://purls.helmholtz-metadaten.de/cmso/isMaterialOf">
+        <owl:inverseOf rdf:resource="http://purls.helmholtz-metadaten.de/cmso/hasMaterial"/>
+        <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/Material"/>
+        <rdfs:range rdf:resource="http://purls.helmholtz-metadaten.de/cmso/ComputationalSample"/>
         <rdfs:label>is material of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -741,8 +748,14 @@ f(x) = 1/(√(2 π) σ) e^-((x - μ)^2/(2 σ^2))</obo:IAO_0000112>
     <!-- http://purls.helmholtz-metadaten.de/cmso/hasLength_x -->
 
     <owl:DatatypeProperty rdf:about="http://purls.helmholtz-metadaten.de/cmso/hasLength_x">
-        <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cmso/SimulationCellLength"/>
-        <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cmso/UnitCell"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cmso/SimulationCellLength"/>
+                    <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cmso/UnitCell"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A data property linking a length to the measurement in the x axis.</obo:IAO_0000115>
         <rdfs:label>has length x</rdfs:label>
@@ -753,8 +766,14 @@ f(x) = 1/(√(2 π) σ) e^-((x - μ)^2/(2 σ^2))</obo:IAO_0000112>
     <!-- http://purls.helmholtz-metadaten.de/cmso/hasLength_y -->
 
     <owl:DatatypeProperty rdf:about="http://purls.helmholtz-metadaten.de/cmso/hasLength_y">
-        <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cmso/SimulationCellLength"/>
-        <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cmso/UnitCell"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cmso/SimulationCellLength"/>
+                    <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cmso/UnitCell"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A data property linking a length to the measurement in the y axis.</obo:IAO_0000115>
         <rdfs:label>has length y</rdfs:label>
@@ -765,8 +784,14 @@ f(x) = 1/(√(2 π) σ) e^-((x - μ)^2/(2 σ^2))</obo:IAO_0000112>
     <!-- http://purls.helmholtz-metadaten.de/cmso/hasLength_z -->
 
     <owl:DatatypeProperty rdf:about="http://purls.helmholtz-metadaten.de/cmso/hasLength_z">
-        <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cmso/SimulationCellLength"/>
-        <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cmso/UnitCell"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cmso/SimulationCellLength"/>
+                    <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cmso/UnitCell"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A data property linking a length to the measurement in the z axis.</obo:IAO_0000115>
         <rdfs:label>has length z</rdfs:label>
@@ -961,6 +986,18 @@ f(x) = 1/(√(2 π) σ) e^-((x - μ)^2/(2 σ^2))</obo:IAO_0000112>
      -->
 
     
+
+
+    <!-- http://purl.org/dc/terms/Agent -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Agent"/>
+
+
+
+    <!-- http://purl.org/dc/terms/LicenseDocument -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/LicenseDocument"/>
+
 
 
     <!-- http://purls.helmholtz-metadaten.de/cdos/cdco/CrystallineMaterial -->
@@ -1220,6 +1257,7 @@ f(x) = 1/(√(2 π) σ) e^-((x - μ)^2/(2 σ^2))</obo:IAO_0000112>
     <!-- http://purls.helmholtz-metadaten.de/cmso/Material -->
 
     <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cmso/Material">
+        <owl:equivalentClass rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/Material"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Materials are substances in the condensed states (liquid, solid, colloidal) designed or manipulated for technological ends.</obo:IAO_0000115>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the CMSO context, &apos;Material&apos; refers to a theoretical entity and not necessarily a tangible object.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Material</rdfs:label>
@@ -1509,6 +1547,17 @@ f(x) = 1/(√(2 π) σ) e^-((x - μ)^2/(2 σ^2))</obo:IAO_0000112>
     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#topConceptOf">
         <skos:definition xml:lang="en">Relates a concept to the concept scheme that it is a top level concept of.</skos:definition>
     </rdf:Description>
+
+    <!-- The length-scale sample modules are mutually disjoint: a computational sample is modelled at a single length scale. -->
+    <owl:AllDisjointClasses>
+        <owl:members rdf:parseType="Collection">
+            <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cmso/AtomicScaleSample"/>
+            <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cmso/NanoscaleSample"/>
+            <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cmso/MesoscaleSample"/>
+            <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cmso/MicroscaleSample"/>
+            <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cmso/MacroscaleSample"/>
+        </owl:members>
+    </owl:AllDisjointClasses>
 </rdf:RDF>
 
 
